@@ -5,6 +5,7 @@
 [![License](https://camo.githubusercontent.com/eb5485388cd282c0139df4ed308b825420589a7c/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6861636b696674656b6861722f49514b6579626f6172644d616e616765722e737667)](https://cocoapods.org/pods/SimpleQR)
 [![Platform](https://img.shields.io/badge/Platform-iOS-blue.svg?style=fla)](https://cocoapods.org/pods/SimpleQR)
 [![Swift](https://img.shields.io/badge/Swift-5-orange.svg)](https://swift.org/)
+[![codebeat badge](https://codebeat.co/badges/50268ca6-bc1d-4911-965a-a7ea2917e575)](https://codebeat.co/projects/github-com-jmhdevelop-simpleqr-master)
 
 ## Example
 
