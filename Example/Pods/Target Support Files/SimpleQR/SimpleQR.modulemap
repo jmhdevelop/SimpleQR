@@ -1,0 +1,6 @@
+framework module SimpleQR {
+  umbrella header "SimpleQR-umbrella.h"
+
+  export *
+  module * { export * }
+}

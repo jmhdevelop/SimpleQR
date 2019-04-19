@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SimpleQR_Example' do
+  pod 'SimpleQR', :path => '../'
+
+  target 'SimpleQR_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
