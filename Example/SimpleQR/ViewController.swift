@@ -7,17 +7,28 @@
 //
 
 import UIKit
+import SimpleQR
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func buttonGenerate(_ sender: Any) {
+        if let text = textField.text, !text.isEmpty {
+            imageView.image = SimpleQR.shared.imageQR(text)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
 }

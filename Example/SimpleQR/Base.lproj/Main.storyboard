@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +20,48 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text for Qr" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAC-77-9Ik">
+                                <rect key="frame" x="16" y="103" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KCZ-NA-0Cv">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="9kV-xb-rOZ"/>
+                                    <constraint firstAttribute="width" constant="240" id="oDf-Lp-xUv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wea-Z2-HhV">
+                                <rect key="frame" x="66" y="533" width="243" height="30"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="buttonGenerate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eba-kW-nYY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KCZ-NA-0Cv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3UP-DI-H7p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wea-Z2-HhV" secondAttribute="trailing" constant="50" id="LAf-3o-smF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Wea-Z2-HhV" secondAttribute="bottom" constant="104" id="NXj-nG-yw4"/>
+                            <constraint firstItem="KCZ-NA-0Cv" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="RNx-oT-EmU"/>
+                            <constraint firstItem="VAC-77-9Ik" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="83" id="TAe-rI-q7a"/>
+                            <constraint firstItem="Wea-Z2-HhV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="ZX7-t6-r8Y"/>
+                            <constraint firstItem="VAC-77-9Ik" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="pLQ-HY-ztk"/>
+                            <constraint firstItem="VAC-77-9Ik" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="zJD-1A-POB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="KCZ-NA-0Cv" id="uPd-76-Un3"/>
+                        <outlet property="textField" destination="VAC-77-9Ik" id="KS7-KP-XCK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
