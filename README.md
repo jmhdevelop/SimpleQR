@@ -10,7 +10,12 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Usage
+
+```swift
+let data = "https://github.com/jmhdevelop/"
+let image = SimpleQR.shared.imageQR(data)
+```
 
 ## Installation
 
