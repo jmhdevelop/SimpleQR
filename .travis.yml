@@ -14,6 +14,6 @@ before_install:
  #- brew install swiftlint || true
  
 script:
- - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/DecodeJSON.xcworkspace -scheme DecodeJSON-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+ - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/SimpleQR.xcworkspace -scheme SimpleQR-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
  #- swiftlint
  - pod lib lint
